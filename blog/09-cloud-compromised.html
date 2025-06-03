@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cloud Is Already Compromised – GJ Sec Ops</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <h1>Your Cloud Is Already Compromised — You Just Don’t Know It Yet</h1>
+
+  <p>Think your AWS or GCP account is secure? Unless you've done the hard work of locking it down, chances are attackers have already scanned it — or are sitting inside waiting for an opportunity.</p>
+
+  <h2>The Reality of Modern Cloud Attacks</h2>
+  <ul>
+    <li>🛰 Cloud assets are publicly exposed by default (S3, IAM, metadata endpoints)</li>
+    <li>🛠 Dev teams move fast, often ignoring the shared responsibility model</li>
+    <li>🔑 Secrets get pushed to public repos every day — and bots find them instantly</li>
+    <li>🐍 Lateral movement in the cloud is easier than in legacy environments</li>
+  </ul>
+
+  <h2>How Cloud Gets Breached</h2>
+  <ul>
+    <li><strong>Misconfigured permissions:</strong> Devs assign *AdminFullAccess* for convenience</li>
+    <li><strong>Stale IAM keys:</strong> Unused creds still live and valid after 6+ months</li>
+    <li><strong>Leaked secrets:</strong> GitHub push includes `.env`, attackers scan and grab it in seconds</li>
+    <li><strong>Default VPC exposure:</strong> Unrestricted traffic from the internet</li>
+  </ul>
+
+  <h2>Signs You May Already Be Compromised</h2>
+  <ul>
+    <li>Cloud bills spiking with no explanation</li>
+    <li>Instances running code you didn’t deploy</li>
+    <li>Outbound traffic to unknown IPs</li>
+    <li>Sudden CPU or storage spikes</li>
+  </ul>
+
+  <h2>Immediate Fixes You Can Make</h2>
+  <ul>
+    <li>✅ Rotate IAM keys and audit all active ones</li>
+    <li>✅ Restrict default VPC access — use security groups and NACLs</li>
+    <li>✅ Enable CloudTrail + GuardDuty or Security Command Center</li>
+    <li>✅ Turn on logging and alerting — ignorance isn’t safety</li>
+  </ul>
+
+  <p><strong>The cloud is not secure by default — you must make it secure.</strong> Assume compromise and build for detection, not just prevention.</p>
+
+  <p><a href="../index.html">← Back to Home</a></p>
+</body>
+</html>
